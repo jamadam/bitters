@@ -56,9 +56,9 @@ a {
     color: $hover-link-color;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: $hover-link-color;
-    outline: none;
   }
 }
 
@@ -87,7 +87,7 @@ cite {
   color: lighten($base-font-color, 25);
   font-style: italic;
 
-  &:before {
+  &::before {
     content: "\2014 \00A0";
   }
 }

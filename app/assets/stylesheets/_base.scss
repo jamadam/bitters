@@ -9,14 +9,20 @@
 // Neat Settings -- uncomment if using Neat -- must be imported before Neat
 // @import "grid-settings";
 
-// Extends
-@import "extends/button";
-@import "extends/clearfix";
-@import "extends/hide-text";
-
 // Typography and Elements
 @import "typography";
 @import "forms";
 @import "tables";
 @import "lists";
 @import "buttons";
+
+/**
+ * @include base-mixin(default-variables((h1-font-size: 2em)));
+ */
+@mixin base-mixin($settings: default-variables()) {
+  @include typography-mixin($settings);
+  @include forms-mixin($settings);
+  @include tables-mixin($settings);
+  @include lists-mixin($settings);
+  @include buttons-mixin($settings);
+}
